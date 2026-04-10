@@ -22,11 +22,14 @@ public class controllerMove : MonoBehaviour
     public float gravity = -9.81f;
 
     public float slopeLimit = 0f;
+    private float cameraHeight;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
 
         Debug.Log(characterController);
+        cameraHeight = cameraRig.centerEyeAnchor.localPosition.y;
 
     }
 
@@ -79,14 +82,30 @@ public class controllerMove : MonoBehaviour
 
         }
 
-        float cameraHeight = cameraRig.centerEyeAnchor.localPosition.y;
         Vector3 cameraLocalPos = cameraRig.centerEyeAnchor.localPosition;
+        cameraHeight = cameraRig.centerEyeAnchor.localPosition.y;
         characterController.height = cameraHeight;
-        characterController.center = new Vector3(
-            0f,
-            cameraHeight / 2f,
-            0f
-        );
+
+        if (isMoving)
+        {
+
+            characterController.center = new Vector3(
+                cameraLocalPos.x,
+                cameraHeight / 2f,
+                cameraLocalPos.z
+            );
+
+        }
+        else {
+
+            characterController.center = new Vector3(
+                0f,
+                cameraHeight / 2f,
+                0f
+            );
+
+        }
+
 
         velocity.y += Physics.gravity.y * Time.deltaTime;
 
