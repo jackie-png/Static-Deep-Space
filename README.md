@@ -1,12 +1,14 @@
 # Static-Deep-Space
-VR Lidar Horror Game
+A LiDAR Horror Game in VR
 (My Finest Work)
+
+
 
 
 # About
 Static Deep Space is a LiDAR based VR horror game I made as my semester project for CPS643 Virtual Reality. 
 
-The premise of the game is that you need to navigate through a pitch black space station to restore emergency power to the station, using only a LiDAR scanner as your only way to see in the dark, and your only defense against it as well.
+*Static Deep Space places you inside a Research Facility Deep in Space, however the power has run out and you need to get to the escape pod. Navigate the dark corridors of the space station by using the LiDAR scanner to scan your surroundings and various other tools such as markers, a compass, and a map to keep track of your location, find levers to open doors and restore emergency power to the space station. But beware, you're not the only one roaming in the darkness.*
 
 This project was made with Unity and Meta's XR toolkit.
 
